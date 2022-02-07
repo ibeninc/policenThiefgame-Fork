@@ -1,0 +1,634 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getPaidTokens",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getTokenTraits",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "bool",
+              "name": "isThief",
+              "type": "bool"
+            },
+            {
+              "internalType": "uint8",
+              "name": "uniform",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "hair",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "eyes",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "facialHair",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "headgear",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "neckGear",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "accessory",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "alphaIndex",
+              "type": "uint8"
+            }
+          ],
+          "internalType": "struct IPoliceAndThief.ThiefPolice",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "isStakingActive",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "15": "contracts/IPoliceAndThief.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/IPoliceAndThief.sol",
+    "exportedSymbols": {
+      "IPoliceAndThief": [
+        2402
+      ]
+    },
+    "id": 2403,
+    "license": "MIT LICENSE",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2364,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "41:23:15"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IPoliceAndThief",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 2402,
+        "linearizedBaseContracts": [
+          2402
+        ],
+        "name": "IPoliceAndThief",
+        "nameLocation": "76:15:15",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "IPoliceAndThief.ThiefPolice",
+            "id": 2383,
+            "members": [
+              {
+                "constant": false,
+                "id": 2366,
+                "mutability": "mutable",
+                "name": "isThief",
+                "nameLocation": "175:7:15",
+                "nodeType": "VariableDeclaration",
+                "scope": 2383,
+                "src": "170:12:15",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 2365,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "170:4:15",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2368,
+                "mutability": "mutable",
+                "name": "uniform",
+                "nameLocation": "198:7:15",
+                "nodeType": "VariableDeclaration",
+                "scope": 2383,
+                "src": "192:13:15",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 2367,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "192:5:15",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2370,
+                "mutability": "mutable",
+                "name": "hair",
+                "nameLocation": "221:4:15",
+                "nodeType": "VariableDeclaration",
+                "scope": 2383,
+                "src": "215:10:15",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 2369,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "215:5:15",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2372,
+                "mutability": "mutable",
+                "name": "eyes",
+                "nameLocation": "241:4:15",
+                "nodeType": "VariableDeclaration",
+                "scope": 2383,
+                "src": "235:10:15",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 2371,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "235:5:15",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2374,
+                "mutability": "mutable",
+                "name": "facialHair",
+                "nameLocation": "261:10:15",
+                "nodeType": "VariableDeclaration",
+                "scope": 2383,
+                "src": "255:16:15",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 2373,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "255:5:15",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2376,
+                "mutability": "mutable",
+                "name": "headgear",
+                "nameLocation": "287:8:15",
+                "nodeType": "VariableDeclaration",
+                "scope": 2383,
+                "src": "281:14:15",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 2375,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "281:5:15",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2378,
+                "mutability": "mutable",
+                "name": "neckGear",
+                "nameLocation": "311:8:15",
+                "nodeType": "VariableDeclaration",
+                "scope": 2383,
+                "src": "305:14:15",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 2377,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "305:5:15",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2380,
+                "mutability": "mutable",
+                "name": "accessory",
+                "nameLocation": "335:9:15",
+                "nodeType": "VariableDeclaration",
+                "scope": 2383,
+                "src": "329:15:15",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 2379,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "329:5:15",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2382,
+                "mutability": "mutable",
+                "name": "alphaIndex",
+                "nameLocation": "360:10:15",
+                "nodeType": "VariableDeclaration",
+                "scope": 2383,
+                "src": "354:16:15",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 2381,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "354:5:15",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "ThiefPolice",
+            "nameLocation": "148:11:15",
+            "nodeType": "StructDefinition",
+            "scope": 2402,
+            "src": "141:236:15",
+            "visibility": "public"
+          },
+          {
+            "functionSelector": "4018b1f8",
+            "id": 2388,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPaidTokens",
+            "nameLocation": "392:13:15",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2384,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "405:2:15"
+            },
+            "returnParameters": {
+              "id": 2387,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2386,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2388,
+                  "src": "431:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2385,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "431:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "430:9:15"
+            },
+            "scope": 2402,
+            "src": "383:57:15",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "94e56847",
+            "id": 2396,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTokenTraits",
+            "nameLocation": "455:14:15",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2391,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2390,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "478:7:15",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2396,
+                  "src": "470:15:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2389,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "470:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "469:17:15"
+            },
+            "returnParameters": {
+              "id": 2395,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2394,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2396,
+                  "src": "534:18:15",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_ThiefPolice_$2383_memory_ptr",
+                    "typeString": "struct IPoliceAndThief.ThiefPolice"
+                  },
+                  "typeName": {
+                    "id": 2393,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 2392,
+                      "name": "ThiefPolice",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 2383,
+                      "src": "534:11:15"
+                    },
+                    "referencedDeclaration": 2383,
+                    "src": "534:11:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_ThiefPolice_$2383_storage_ptr",
+                      "typeString": "struct IPoliceAndThief.ThiefPolice"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "533:20:15"
+            },
+            "scope": 2402,
+            "src": "446:108:15",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "61f64457",
+            "id": 2401,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isStakingActive",
+            "nameLocation": "569:15:15",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2397,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "584:2:15"
+            },
+            "returnParameters": {
+              "id": 2400,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2399,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2401,
+                  "src": "610:4:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2398,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "610:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "609:6:15"
+            },
+            "scope": 2402,
+            "src": "560:56:15",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 2403,
+        "src": "66:552:15",
+        "usedErrors": []
+      }
+    ],
+    "src": "41:578:15"
+  },
+  "bytecode": "",
+  "bytecodeSha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.8.11+commit.d7f03943"
+  },
+  "contractName": "IPoliceAndThief",
+  "coverageMap": {
+    "branches": {},
+    "statements": {}
+  },
+  "dependencies": [],
+  "deployedBytecode": "",
+  "deployedSourceMap": "",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "offset": [
+    66,
+    618
+  ],
+  "opcodes": "",
+  "pcMap": {},
+  "sha1": "685d22e54127d987f324eca5a4c66c3a4a06f379",
+  "source": "// SPDX-License-Identifier: MIT LICENSE\n\npragma solidity ^0.8.0;\n\ninterface IPoliceAndThief {\n    // struct to store each token's traits\n    struct ThiefPolice {\n        bool isThief;\n        uint8 uniform;\n        uint8 hair;\n        uint8 eyes;\n        uint8 facialHair;\n        uint8 headgear;\n        uint8 neckGear;\n        uint8 accessory;\n        uint8 alphaIndex;\n    }\n\n    function getPaidTokens() external view returns (uint256);\n\n    function getTokenTraits(uint256 tokenId)\n        external\n        view\n        returns (ThiefPolice memory);\n\n    function isStakingActive() external view returns (bool);\n}\n",
+  "sourceMap": "",
+  "sourcePath": "contracts/IPoliceAndThief.sol",
+  "type": "interface"
+}
