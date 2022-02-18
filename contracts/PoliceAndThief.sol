@@ -20,7 +20,11 @@ contract PoliceAndThief is
 {
     // mint price
     uint256 public MINT_PRICE = 1.7 ether;
+    uint256 public WHITELIST_PRICE = 0.027 ether;
     uint256 public MAX_MINT = 30;
+
+    // set time when contract is deployed
+    uint256 public LAUNCH_TIME;
     // max number of tokens that can be minted - 50000 in production
     uint256 public immutable MAX_TOKENS;
     // number of tokens that can be claimed for free - 20% of MAX_TOKENS
@@ -78,6 +82,8 @@ contract PoliceAndThief is
 
         MAX_TOKENS = _maxTokens;
         PAID_TOKENS = _maxTokens / 5;
+
+        LAUNCH_TIME = block.timestamp;
     }
 
     function setRandomSource(ISeed _seed) external onlyOwner {
@@ -102,9 +108,19 @@ contract PoliceAndThief is
             require(inWhitelist[msg.sender], "Not whitelisted");
         }
 
+        // allow only whitelist addresses to mint within 1 hour
+        if (LAUNCH_TIME <= 60 minutes){
+          require(inWhitelist[msg.sender], "Not whitelisted address can mint now");
+        } throw
+
         require(tx.origin == _msgSender(), "Only EOA");
         require(minted + amount <= MAX_TOKENS, "All tokens minted");
         require(amount > 0 && amount <= MAX_MINT, "Invalid mint amount");
+
+        // check whityelis cost (80usd)
+        if (onlyWhitelist){
+               require(msg.value => WHITELIST_PRICE, "Invalid payment amount");
+            }
 
         if (minted < PAID_TOKENS) {
             require(
@@ -112,6 +128,7 @@ contract PoliceAndThief is
                 "All tokens on-sale already sold"
             );
             require(amount * MINT_PRICE == msg.value, "Invalid payment amount");
+
         } else {
             require(msg.value == 0);
         }
@@ -368,6 +385,13 @@ contract PoliceAndThief is
     function setPaused(bool _paused) external onlyOwner {
         if (_paused) _pause();
         else _unpause();
+    }
+
+     /**
+     * enables owner to pause / unpause minting
+     */
+    function setWhitelistPrice(uint256 _Newprice) external onlyOwner {
+        WHITELIST_PRICE = _Newprice;
     }
 
     function setWhitelist(address[] memory addrs) external onlyOwner {
